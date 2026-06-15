@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
+import { assetPath } from "@/lib/utils";
 
 type Node = {
   id: string;
@@ -111,7 +112,7 @@ export function NodeGraph() {
           />
           <div className="relative flex h-28 w-28 flex-col items-center justify-center rounded-full border border-primary/40 bg-card/95 shadow-glow-lg backdrop-blur-md">
             <Image
-              src="/odin-mark-light.png"
+              src={assetPath("/odin-mark-light.png")}
               alt="Odin"
               width={48}
               height={48}

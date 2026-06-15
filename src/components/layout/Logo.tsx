@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
+import { assetPath, cn } from "@/lib/utils";
 
 export function Logo({
   className,
@@ -14,7 +14,7 @@ export function Logo({
   const content = (
     <span className={cn("inline-flex items-center gap-2.5", className)}>
       <Image
-        src="/odin-mark-light.png"
+        src={assetPath("/odin-mark-light.png")}
         alt="Odin"
         width={40}
         height={40}
