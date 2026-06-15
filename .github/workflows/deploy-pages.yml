@@ -34,9 +34,9 @@ jobs:
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5
-        with:
-          # Auto-enable GitHub Pages on first run (no manual setting needed)
-          enablement: true
+        # Pages must be enabled once manually:
+        # Repo Settings → Pages → Build and deployment → Source: "GitHub Actions".
+        # (The Actions token cannot create the Pages site automatically.)
 
       - name: Install dependencies
         run: npm ci
